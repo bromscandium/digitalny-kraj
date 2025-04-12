@@ -1,0 +1,100 @@
+.events-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+
+    .carousel-arrow {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: rgba(0, 102, 255, 0.15);
+        color: #0066ff;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        z-index: 10;
+
+        &:hover {
+            background: rgba(0, 102, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        &.left {
+            margin-right: 20px;
+        }
+
+        &.right {
+            margin-left: 20px;
+        }
+    }
+
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1000px;
+    }
+
+    .event-card {
+        background: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+
+        &:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .event-content {
+            padding: 20px;
+
+            h3 {
+                font-size: 20px;
+                color: #12263f;
+                margin-bottom: 10px;
+            }
+
+            .event-excerpt {
+                font-size: 15px;
+                color: #6e84a3;
+                margin-bottom: 10px;
+            }
+
+            .event-date {
+                font-size: 13px;
+                color: #999;
+                margin-bottom: 10px;
+            }
+
+            .event-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+
+                .tag {
+                    background-color: rgba(0, 102, 255, 0.1);
+                    color: #0066ff;
+                    font-size: 13px;
+                    padding: 4px 10px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.place-info-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.place-card {
+    background: linear-gradient(to right, #ffffff 60%, rgba(0, 102, 255, 0.05));
+    padding: 40px;
+    border-radius: 16px;
+    position: relative;
+    border-left: 6px solid #0066FF;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 102, 255, 0.1);
+    }
+}
+
+.place-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #12263f;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &::before {
+        content: '📍';
+        font-size: 26px;
+        color: #2c7be5;
+    }
+}
+
+.place-description {
+    font-size: 17px;
+    color: #6e84a3;
+    line-height: 1.75;
+    margin-bottom: 25px;
+}
+
+.place-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .place-list-item {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 14px;
+        font-size: 15px;
+        color: #12263f;
+
+        &::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #0066FF;
+            font-size: 14px;
+        }
+    }
+}

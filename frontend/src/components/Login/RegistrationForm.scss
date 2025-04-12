@@ -1,0 +1,46 @@
+.login-form-wrapper,
+.registration-form-wrapper {
+    font-family: 'Montserrat', sans-serif;
+
+    .ant-input,
+    .ant-select-selector,
+    .ant-btn,
+    .ant-picker {
+        height: 48px;
+        font-size: 16px;
+        line-height: 48px;
+        font-family: inherit;
+    }
+
+    .ant-form-item-label > label {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .btn-register {
+        font-weight: 600;
+    }
+
+    .registration-form-wrapper,
+    .login-form-wrapper {
+        font-family: 'Montserrat', sans-serif;
+
+        // Стиль для заголовків та інших елементів форми
+        .ant-form-item-label {
+            font-family: 'Montserrat', sans-serif; // застосувати до лейблів
+            font-weight: 500; // або інше значення, якщо потрібно
+        }
+
+        .ant-btn {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        // Додатково: застосуємо до інших елементів
+        .ant-input,
+        .ant-select-selector,
+        .ant-input-password {
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+}

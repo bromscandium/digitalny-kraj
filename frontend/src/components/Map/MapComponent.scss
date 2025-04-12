@@ -1,0 +1,226 @@
+/* Контейнер для карти та фільтрів */
+.map-wrapper {
+    display: flex;
+    justify-content: center;  /* Центруємо елементи по горизонталі */
+    align-items: flex-start;  /* Вирівнювання по вертикалі */
+    margin-top: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;  /* Відступ знизу */
+}
+
+.map-container-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.filters {
+    width: 250px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.filters label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filters input.filter {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Стиль для кожного фільтру */
+.filters label:hover {
+    transform: scale(1.05);
+}
+
+.filters input:checked.filter {
+    background-color: #4caf50;
+    border: 2px solid #4caf50;
+}
+
+.filters input:focus.filter {
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.6);
+}
+
+/* Лейбл фільтра */
+.filter-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-grow: 1;
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Іконка фільтра */
+.filter-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    background-color: #3498db;
+    transition: background-color 0.3s ease;
+}
+
+/* Стилі для мапи */
+.map-container {
+    width: calc(100% - 270px); /* Віднімемо ширину панелі фільтрів */
+    height: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid #3498db;  /* Синій бордер для карти */
+    z-index: 1;
+}
+
+/* Картки статистики */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+/* Заголовки панелей */
+.panel-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.panel-title i {
+    color: var(--primary-color);
+}
+
+/* Стилі пошукового поля */
+.search-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7f8c8d;
+}
+
+/* Стіль для картки */
+.custom-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 2px solid white;
+}
+
+.school-icon {
+    background-color: #3498db;
+}
+
+.police-icon {
+    background-color: #e74c3c;
+}
+
+.hospital-icon {
+    background-color: #2ecc71;
+}
+
+.post-icon {
+    background-color: #f39c12;
+}
+
+.restaurant-icon {
+    background-color: #9b59b6;
+}
+
+.urad-icon {
+    background-color: #1abc9c;
+}
+
+.interest-icon {
+    background-color: #34495e;
+}
+
+.legend {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.9;
+    border-radius: 50%;
+}

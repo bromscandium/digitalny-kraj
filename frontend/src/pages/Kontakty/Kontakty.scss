@@ -1,0 +1,235 @@
+.banner-wrapper {
+    width: 100%;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.contacts .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contacts .office-hours-container,
+.contacts .contact-section.general-contacts,
+.contacts .contact-form-extended {
+    flex: 1;
+    background-color: #f9f9f9;
+    border: 1px solid rgba(0, 102, 255, 0.2);
+    border-radius: 6px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.contacts h2 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.contacts h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #2C7BE5;
+}
+
+.contacts .office-hours-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contacts .office-block {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contacts .office-block h3 {
+    font-size: 20px;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.contacts .office-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contacts .office-block li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: var(--dark-color);
+}
+
+.contacts .office-block li strong,
+.contacts .contact-department h3 {
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+.contacts .office-block li em {
+    font-size: 14px;
+    color: var(--gray-color);
+}
+
+.contacts .contact-section.general-contacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.contacts .contact-section.general-contacts h2 {
+    grid-column: 1 / -1;
+}
+
+.contacts .contact-department p {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #12263F;
+}
+
+.contacts .contact-department p a,
+.contacts .contact-department p a[href^="mailto"],
+.contacts .contact-department p a[href^="tel"] {
+    color: #2C7BE5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contacts .contact-department p a:hover,
+.contacts .contact-department p a[href^="mailto"]:hover,
+.contacts .contact-department p a[href^="tel"]:hover {
+    color: #6E84A3;
+}
+
+.contacts .contact-form-extended p {
+    font-size: 16px;
+    color: var(--gray-color);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contacts form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacts .form-group,
+.contacts .checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts .form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.contacts label .required {
+    color: red;
+    margin-left: 3px;
+}
+
+.contacts .form-group input,
+.contacts .form-group textarea {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.contacts .form-group input:focus,
+.contacts .form-group textarea:focus {
+    outline: none;
+    border-color: #2C7BE5;
+}
+
+.contacts .form-group.half-width {
+    width: 48%;
+}
+
+.contacts .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contacts .form-row .form-group.half-width {
+    width: 48%;
+}
+
+.contacts .checkbox-group {
+    flex-direction: row;
+    align-items: center;
+}
+
+.contacts .checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+.contacts .checkbox-group label {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.contacts button[type="submit"] {
+    align-self: flex-start;
+    padding: 12px 32px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: #2C7BE5;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.contacts button[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #2C7BE5;
+    border-color: #2C7BE5;
+}
+
+@media (max-width: 768px) {
+    .contacts .contact-info {
+        flex-direction: column;
+    }
+
+    .contacts .office-hours-container,
+    .contacts .contact-section.general-contacts {
+        padding: 20px;
+    }
+
+    .contacts .form-row {
+        flex-direction: column;
+    }
+
+    .contacts .form-group.half-width,
+    .contacts .form-row .form-group.half-width {
+        width: 100%;
+    }
+
+    .contacts .contact-section.general-contacts {
+        grid-template-columns: 1fr;
+    }
+}

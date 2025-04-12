@@ -1,0 +1,152 @@
+footer {
+    background-color: #000a1a;
+    color: #ffffff;
+    padding: 40px 0;
+    font-family: 'Montserrat', sans-serif;
+
+    .container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+
+            .footer-column {
+                flex: 1;
+                min-width: 200px;
+                max-width: 300px;
+                text-align: left;
+
+                h3 {
+                    font-size: 20px;
+                    margin-bottom: 15px;
+                    color: #6294ff;
+                    position: relative;
+                    padding-bottom: 5px;
+                }
+
+                p,
+                ul,
+                .contact-info {
+                    font-size: 15px;
+                    line-height: 1.6;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li a {
+                        color: #ffffff;
+                        text-decoration: none;
+                        position: relative;
+                        transition: color 0.3s;
+                        font-weight: 600;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: -2px;
+                            height: 2px;
+                            width: 0;
+                            background-color: #6294ff;
+                            transition: width 0.3s ease;
+                        }
+
+                        &:hover {
+                            color: #6294ff;
+
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .social-links {
+                    display: flex;
+                    gap: 15px;
+                    margin-top: 10px;
+
+                    a {
+                        font-size: 18px;
+                        color: #ffffff;
+                        transition: color 0.3s;
+
+                        &:hover {
+                            color: #6294ff;
+                        }
+                    }
+                }
+
+                .contact-info {
+                    li {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 10px;
+                        margin-bottom: 10px;
+
+                        i {
+                            font-size: 18px;
+                            margin-top: 3px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+            margin-top: 30px;
+            font-size: 14px;
+            text-align: center;
+
+            a {
+                color: #ffffff;
+                text-decoration: none;
+                position: relative;
+                transition: color 0.3s;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    height: 2px;
+                    width: 0;
+                    background-color: #6294ff;
+                    transition: width 0.3s ease;
+                }
+
+                &:hover {
+                    color: #6294ff;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-grid {
+            grid-template-columns: 1fr;
+            text-align: center;
+
+            .footer-column {
+                .social-links,
+                .contact-info li {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

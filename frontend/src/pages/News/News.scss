@@ -1,0 +1,111 @@
+.news-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+
+    .carousel-arrow {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: rgba(0, 102, 255, 0.15);
+        color: #0066ff;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        z-index: 10;
+
+        &:hover {
+            background: rgba(0, 102, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        &.left {
+            margin-right: 20px;
+        }
+
+        &.right {
+            margin-left: 20px;
+        }
+    }
+
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1000px;
+    }
+
+    .news-card {
+        background: #f1f4f9;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+
+        &:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            padding: 20px;
+
+            h3 {
+                font-size: 20px;
+                color: #12263f;
+                margin-bottom: 10px;
+            }
+
+            .news-excerpt {
+                font-size: 15px;
+                color: #6e84a3;
+                margin-bottom: 15px;
+                flex-grow: 1;
+            }
+
+            .news-meta {
+                margin-top: auto;
+
+                .news-tags {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 6px;
+                    margin-bottom: 10px;
+
+                    .tag {
+                        background: rgba(0, 102, 255, 0.1);
+                        color: #0066ff;
+                        padding: 4px 10px;
+                        font-size: 13px;
+                        border-radius: 4px;
+                        font-weight: 500;
+                    }
+                }
+
+                .news-date {
+                    margin-bottom: 10px;
+                    font-size: 13px;
+                    color: #999;
+                }
+            }
+        }
+    }
+}
