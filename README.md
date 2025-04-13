@@ -50,7 +50,7 @@ To run the frontend, navigate to the frontend folder and execute:
 
 ```bash
 npm run dev
-
+```
 
 ![image](https://github.com/user-attachments/assets/b02e6665-5cf2-4935-9c3d-a26be492fd7c)
 
